@@ -3,8 +3,14 @@ import WaitlistForm from "@/components/waitlist-form"
 import FeatureCard from "@/components/feature-card"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import clientPromise from "@/lib/mongo"
 
 export default function Home() {
+
+  console.log(process.env.MONGO_URI);
+  
+  // clientPromise.db.collection()
+
   return (
     <main className="min-h-screen">
       <Navbar />
