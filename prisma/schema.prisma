@@ -7,6 +7,45 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+type Location {
+  ip                   String
+  network              String
+  version              String
+  city                 String
+  region               String
+  region_code          String
+  country              String
+  country_name         String
+  country_code         String
+  country_code_iso3    String
+  country_capital      String
+  country_tld          String
+  continent_code       String
+  in_eu                Boolean
+  postal               String
+  latitude             Int
+  longitude            Int
+  timezone             String
+  utc_offset           String
+  country_calling_code String
+  currency             String
+  currency_name        String
+  languages            String
+  country_area         Int
+  country_population   Int
+  asn                  String
+  org                  String
+}
+
+model Visitor {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  ipAddress String
+  location  Location
+  device    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
 model User {
   id            String    @id @default(auto()) @map("_id") @db.ObjectId
   name          String?
