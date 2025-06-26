@@ -2,7 +2,7 @@ import React from 'react'
 
 const Features = () => {
   return (
-    <div>Features</div>
+    <div className='h-screen text-5xl flex items-center justify-center font-extrabold'>Features</div>
   )
 }
 

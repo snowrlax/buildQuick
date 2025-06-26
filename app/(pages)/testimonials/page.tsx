@@ -2,7 +2,7 @@ import React from 'react'
 
 const Testimonials = () => {
   return (
-    <div>Testimonials</div>
+    <div className='h-screen text-5xl flex items-center justify-center font-extrabold'>Testimonials</div>
   )
 }
 
