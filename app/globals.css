@@ -64,8 +64,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 
   transition-property: opacity, background, transform, filter;
-  transition-timing-function: ease-in-out;
-  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+  transition-duration: 800ms;
 }
 
 .page-transition {
