@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import TransitionLink from "./utils/TransitionLink";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,16 +30,16 @@ export default function Navbar() {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <Link href="#features">Features</Link>
+                  <Link href="/features">Features</Link>
                 </li>
                 <li>
-                  <Link href="#testimonials">Testimonials</Link>
+                  <Link href="/testimonials">Testimonials</Link>
                 </li>
                 <li>
-                  <Link href="#pricing">Pricing</Link>
+                  <Link href="/pricing">Pricing</Link>
                 </li>
                 <li>
-                  <Link href="#faq">FAQ</Link>
+                  <Link href="/faqs">FAQ</Link>
                 </li>
               </ul>
             )}
@@ -50,16 +51,16 @@ export default function Navbar() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link href="#features">Features</Link>
+              <TransitionLink href="/features">Features</TransitionLink>
             </li>
             <li>
-              <Link href="#testimonials">Testimonials</Link>
+              <TransitionLink href="/testimonials">Testimonials</TransitionLink>
             </li>
             <li>
-              <Link href="#pricing">Pricing</Link>
+              <TransitionLink href="/pricing">Pricing</TransitionLink>
             </li>
             <li>
-              <Link href="#faq">FAQ</Link>
+              <TransitionLink href="/faqs">FAQ</TransitionLink>
             </li>
           </ul>
         </div>
